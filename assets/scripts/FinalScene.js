@@ -146,9 +146,9 @@ this.subtitle.setAlpha(1);
         this.startButton.setOrigin(0.6,0);
     }
    
-setEvents(){
+/*setEvents(){
     this.input.on("pointerdown", ()=>window.parent.postMessage('nextLevel'))
-}
+}*/
    
 
     createObjects(){
