@@ -8,7 +8,7 @@ class PreloadScene extends Phaser.Scene{
         
         this.load.image("forest","assets/sprites/ForestRS.png");
         this.load.image("house1","assets/sprites/HouseEDRS.png");
-        this.load.image("house2","assets/sprites/HouseNdrs.png");
+        this.load.image("house2","assets/sprites/House2Bg.png");
         this.load.image("house3","assets/sprites/HouseBsdRS.png");
         this.load.image("basement1","assets/sprites/BasementNoPortalsRS.png");
         this.load.image("basement2","assets/sprites/basementPortalsRS.png");
