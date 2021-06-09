@@ -139,7 +139,7 @@ this.subtitle.setAlpha(1);
     createEnd() {
     
    
-        this.startButton = this.add.text(config.width/2,config.height/2,'CLICK FOR NEXT LEVEL',{
+        this.startButton = this.add.text(config.width/2,config.height/2,'THE END',{
             font:'40px',
             fill:"#000"
         });
