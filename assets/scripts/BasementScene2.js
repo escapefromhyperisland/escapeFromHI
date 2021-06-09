@@ -87,20 +87,18 @@ hideSubtitle() {
 }
 
 
-    createSounds() {
-        this.sounds = {
-        card : this.sound.add('card'),
-        success : this.sound.add('success'),
-        complete : this.sound.add('complete'),
-       theme : this.sound.add('theme'),
-       windowssound: this.sound.add('windowssound')
-        };
+createSounds() {
+    this.sounds = {
+    card : this.sound.add('card'),
+    success : this.sound.add('success'),
+    complete : this.sound.add('complete'),
+    street : this.sound.add('street'),
+   windowssound: this.sound.add('windowssound')
+    };
 
-      /*   this.sounds.theme.play({
-            volume: 0.05
-        }); */
-        
-    }
+    this.sounds.street.play({
+        volume: 0.5
+    });}
    
     create(){
         
@@ -254,6 +252,7 @@ return positions;
                 else {this.fPlayer.anims.stop();};
 
                 if(this.fPlayer.x>=1200){
+                    
                     //!launching next scene, pushing Mind parameters
                     this.scene.start('Final',{mind:this.mind});  
                 }

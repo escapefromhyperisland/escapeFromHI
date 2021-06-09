@@ -55,6 +55,7 @@ this.subtitle.setAlpha(1);
         
         console.log(this.mind);
         this.createBackground(); 
+        this.createEnd();
         this.createObjects();
         this.createSounds();    
     }
@@ -122,6 +123,7 @@ this.subtitle.setAlpha(1);
         }
     createBackground(){
         this.cameras.main.backgroundColor.setTo(255,255,255);
+        /* this.add.sprite(0,0,"bg").setOrigin(0, 0); */
          
         /* this.add.sprite(0,0,"basement1").setOrigin(0, 0); */
     }
@@ -134,7 +136,15 @@ this.subtitle.setAlpha(1);
 
 
 
+    createEnd() {
     
+   
+        this.startButton = this.add.text(config.width/2,config.height/2,'THE END',{
+            font:'40px',
+            fill:"#000"
+        });
+        this.startButton.setOrigin(0.6,0);
+    }
    
 
    

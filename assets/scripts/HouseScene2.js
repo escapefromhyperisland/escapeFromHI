@@ -95,20 +95,18 @@ hideSubtitle() {
 }
 
 
-    createSounds() {
-        this.sounds = {
-        card : this.sound.add('card'),
-        success : this.sound.add('success'),
-        complete : this.sound.add('complete'),
-       theme : this.sound.add('theme'),
-       windowssound: this.sound.add('windowssound')
-        };
+createSounds() {
+    this.sounds = {
+    card : this.sound.add('card'),
+    success : this.sound.add('success'),
+    complete : this.sound.add('complete'),
+    street : this.sound.add('street'),
+   windowssound: this.sound.add('windowssound')
+    };
 
-      /*   this.sounds.theme.play({
-            volume: 0.05
-        }); */
-        
-    }
+    this.sounds.street.play({
+        volume: 0.5
+    });}
    
     create(){
         
@@ -161,7 +159,7 @@ this.cards.forEach(card=>{
   card.destroyCards();
 }) 
 
-this.sounds.complete.play();
+this.sounds.card.play();
 
 this.hideSubtitle();
 
@@ -260,6 +258,7 @@ return positions;
                 else {this.fPlayer.anims.stop();};
 
                 if(this.fPlayer.x>=1279){
+                    this.sounds.street.stop();
                     //!launching next scene, pushing Mind parameters
                     this.scene.start('House3',{mind:this.mind});  
                 }

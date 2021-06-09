@@ -10,9 +10,13 @@ class ForestScene extends Phaser.Scene{
         card : this.sound.add('card'),
         success : this.sound.add('success'),
         complete : this.sound.add('complete'),
-       theme : this.sound.add('theme'),
+        street : this.sound.add('street'),
        windowssound: this.sound.add('windowssound')
-        };}
+        };
+    
+        this.sounds.street.play({
+            volume: 0.5
+        });}
 
         createPlayerSub(playerSubText,paddingRight){
             console.log("playersub-appear");
@@ -74,7 +78,7 @@ onCardClicked(pointer, card) {
         card.destroyCards();
     }) ;
   
-    this.sounds.complete.play();
+    this.sounds.card.play();
     this.createPlayerSub('Maybe I should check the house ',400)
    
   
@@ -174,10 +178,11 @@ update() {
 
             if(this.fPlayer.x>=1100){
                 //!launching next scene, pushing Mind parameters
-                
+                this.sounds.street.stop();
                 this.scene.start('House1',{mind:this.mind});  
             }
             if(this.fPlayer.x==200){
+                
                this.createPlayerSub("Aww. A house with two little rabbits! Cute!",1)
                 this.fPlayer.x +=1;
               

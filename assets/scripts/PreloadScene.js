@@ -50,7 +50,7 @@ class PreloadScene extends Phaser.Scene{
             this.load.image('4card6', 'assets/sprites/4card6.png');
 
 
-
+            this.load.audio('street',"assets/sounds/Atmarimba.mp3")
             this.load.audio('theme','assets/sounds/theme.mp3');
             this.load.audio('windowssound','assets/sounds/winxp.mp3');
             this.load.audio('complete','assets/sounds/complete.mp3');
