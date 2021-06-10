@@ -139,16 +139,16 @@ this.subtitle.setAlpha(1);
     createEnd() {
     
    
-        this.startButton = this.add.text(config.width/2,config.height/2,'THE END',{
+        this.startButton = this.add.text(config.width/2,config.height/2,'Click for next level',{
             font:'40px',
             fill:"#000"
         });
         this.startButton.setOrigin(0.6,0);
     }
    
-/*setEvents(){
+setEvents(){
     this.input.on("pointerdown", ()=>window.parent.postMessage('nextLevel'))
-}*/
+}
    
 
     createObjects(){
